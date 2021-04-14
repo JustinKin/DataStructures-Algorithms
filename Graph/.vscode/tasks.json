@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "tasks":
+    [
+        {
+            "type": "shell",
+            "label": "GoodLuck-G++",
+            "command": "C:/mingw64/bin/g++.exe",
+            "args":
+            [
+                "-march=native",
+                "-O2",
+                "-fopenmp",
+                "-g",
+                "${workspaceFolder}/src/*.cpp",
+                "-o",
+                "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
+
+                "-I","D:/QinJunyou/C/DataStructures-Algorithms/Graph/include",
+                "-I","D:/Lib/FMT/include",
+                "-I","D:/Lib/Eigen3/Eigen",
+
+                "-L","D:/Lib/FMT/lib",
+
+                "-l","fmt",
+
+                "-m64"
+            ],
+            "options":
+            {
+                "cwd": "C:/mingw64/bin"
+            },
+            "problemMatcher":
+            [
+                "$gcc"
+            ],
+            "group":
+            {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
